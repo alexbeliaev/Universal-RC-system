@@ -7,7 +7,7 @@
 volatile int delays[4]={1500,1500,1500,1500};          // initial values values 
 
 void setup() {
-  pinMode(Dp, OUTPUT);   //DDRD |= 1<<3;   = 00001000  Set D3 direction for output (Not recieving)
+  pinMode(Dp, OUTPUT);   //or use DDRD |= 1<<3;   = 00001000  Set D3 direction for output (Not recieving)
 }
   
 void loop() {
