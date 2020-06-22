@@ -3,12 +3,14 @@
 #include "nRF24L01.h"
 #include "RF24.h"
 
+
 //U8GLIB_SSD1306_128X64 u8g(U8G_I2C_OPT_NONE|U8G_I2C_OPT_DEV_0);	// I2C / TWI 
 //U8GLIB_SSD1306_128X64 u8g(U8G_I2C_OPT_DEV_0|U8G_I2C_OPT_NO_ACK|U8G_I2C_OPT_FAST);	// Fast I2C / TWI 
-//U8GLIB_SSD1306_128X64 u8g(U8G_I2C_OPT_NO_ACK);	// Display which does not send AC
-
 //U8GLIB_SSD1306_128X32 u8g(U8G_I2C_OPT_NO_ACK|U8G_I2C_OPT_FAST);  // I added few options, no difference
-U8GLIB_SSD1306_128X32 u8g(U8G_I2C_OPT_NONE);  // I2C / TWI 
+
+
+//U8GLIB_SSD1306_128X32 u8g(U8G_I2C_OPT_NONE);  // Tested     I2C / TWI 
+U8GLIB_SSD1306_128X64 u8g(U8G_I2C_OPT_NO_ACK);  // Tested     Display which does not send AC
 
 
 RF24 radio(7,5);      // CE 7, CSN 5
